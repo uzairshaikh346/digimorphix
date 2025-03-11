@@ -6,9 +6,9 @@ export function FlipWordsDemo() {
 
   return (
     <div className="h-[100px] flex justify-center items-center">
-      <div className="text-4xl mx-auto font-normal text-gray-300">
-      Unlock the Power of
-        <FlipWords words={words} /> 
+      <div className="md:text-4xl text-2xl mx-auto font-bold text-gray-300">
+      Unlock the Power of <br />
+        <FlipWords words={words} className="my-5 md:my-0 text-2xl md:text-4xl"/> 
       </div>
     </div>
   );

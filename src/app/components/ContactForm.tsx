@@ -2,7 +2,7 @@ import React from "react";
 
 function ContactForm() {
   return (
-    <section className="text-gray-400 body-font relative bg-black">
+    <section className="text-gray-400 body-font relative bg-black md:px-10">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap lg:flex-nowrap justify-between">
           <div className="lg:w-1/2 w-full mb-10 lg:mb-0">
