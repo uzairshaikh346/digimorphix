@@ -6,7 +6,8 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-card";
 export function ClientReview() {
   return (
     <div className="h-[36rem] rounded-md fle z-10x flex-col antialiased bg-black  items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
+        <h1 className='text-[#00ff00] text-3xl md:text-5xl font-bold text-center my-10'>Client Review</h1>
+        <InfiniteMovingCards
         className="bg-black"
         items={testimonials}
         direction="right"
@@ -18,51 +19,55 @@ export function ClientReview() {
 
 const testimonials = [
   {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+    "quote": "It was a great experience with MarketIX",
+    "name": "Mathew",
+    "title": "Business owner"
   },
   {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+    "quote": "MarketIX's service was outstanding and very professional.",
+    "name": "Sophia",
+    "title": "Entrepreneur"
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    "quote": "I highly recommend MarketIX for their excellent customer support.",
+    "name": "Ali",
+    "title": "Marketing Manager"
   },
   {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    "quote": "MarketIX helped us achieve our business goals efficiently.",
+    "name": "Emma",
+    "title": "CEO"
   },
   {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+    "quote": "Exceptional service and great results with MarketIX.",
+    "name": "John",
+    "title": "Small Business Owner"
   },
   {
-    quote:
-      "MarketIX ne hamare business ko nayi bulandiyon tak le gaya. Inki marketing strategies ne humare sales mein zabardast izafa kiya.",
-    name: "Uzair Ahmed",
-    title: "CEO, Tech Innovations",
+    "quote": "Working with MarketIX was a game-changer for our company.",
+    "name": "Liam",
+    "title": "COO"
   },
   {
-    quote:
-      "Inka customer service aur support faqat bemisaal hai. MarketIX team humesha responsive aur helpful hoti hai.",
-    name: "Aisha Khan",
-    title: "Marketing Manager, Creative Solutions",
+    "quote": "The team at MarketIX is extremely knowledgeable and helpful.",
+    "name": "Olivia",
+    "title": "Business Consultant"
   },
   {
-    quote:
-      "MarketIX ki wajah se hamari website traffic aur engagement dono mein bhoht bara farq aya hai. Unka expertise lajawab hai.",
-    name: "Ali Raza",
-    title: "Founder, Startup Hub",
+    "quote": "MarketIX's innovative strategies really boosted our sales.",
+    "name": "James",
+    "title": "Sales Director"
   },
-];
+  {
+    "quote": "Amazing service, highly satisfied with MarketIX.",
+    "name": "Mia",
+    "title": "Freelancer"
+  },
+  {
+    "quote": "MarketIX exceeded our expectations with their top-notch service.",
+    "name": "Noah",
+    "title": "Startup Founder"
+  }
+]
+
 
