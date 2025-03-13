@@ -5,7 +5,7 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-card";
 
 export function ClientReview() {
   return (
-    <div className="h-[36rem] rounded-md flex flex-col antialiased bg-black  items-center justify-center relative overflow-hidden">
+    <div className="h-[36rem] rounded-md fle z-10x flex-col antialiased bg-black  items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         className="bg-black"
         items={testimonials}
