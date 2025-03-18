@@ -33,7 +33,7 @@ function Footer() {
                 CONTACT US
               </h2>
               <nav className="list-none mb-10">
-                <li><span className="hover:text-gray-500">Email: digimorphix@gmail.com</span></li>
+                <li><span className="hover:text-gray-500">Email: marketix@gmail.com</span></li>
                 <li><span className="hover:text-gray-500">Phone: +92 314 2083121</span></li>
                 <li><span className="hover:text-gray-500">Location: Karachi, Pakistan</span></li>
               </nav>
