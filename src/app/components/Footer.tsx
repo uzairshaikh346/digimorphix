@@ -33,7 +33,7 @@ function Footer() {
                 CONTACT US
               </h2>
               <nav className="list-none mb-10">
-                <li><span className="hover:text-gray-500">Email: marketix@gmail.com</span></li>
+                <li><span className="hover:text-gray-500">Email: marketix29@gmail.com </span></li>
                 <li><span className="hover:text-gray-500">Phone: +92 314 2083121</span></li>
                 <li><span className="hover:text-gray-500">Location: Karachi, Pakistan</span></li>
               </nav>
@@ -43,7 +43,7 @@ function Footer() {
         <div className="bg-gray-950">
           <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
             <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-              © 2025 Digimorphix — All Rights Reserved
+              © 2025 MarketIX — All Rights Reserved
             </p>
            
           </div>

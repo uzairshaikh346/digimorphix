@@ -19,7 +19,7 @@ function ContactForm() {
             <div className="mt-4">
               <p className="text-lg font-semibold text-gray-200">📧 Email:</p>
               <a href="mailto:example@email.com" className="text-gray-300">
-              digimorphix@gmail.com
+              marketix29@gmail.com 
               </a>
             </div>
             <div className="mt-4">
