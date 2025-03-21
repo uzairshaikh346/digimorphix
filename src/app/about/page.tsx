@@ -6,11 +6,12 @@ import AboutSectionCards from '../components/AboutSectionCards'
 
 function page() {
   return (
-    <div>
+    <div className='bg-black'>
+
       <LampBanner props="About Us"/>
       <AboutSection/>
       <Image src="/aboutsectionImg.jpg" height={1000} width={1000} alt='about us'
-      className='w-full'/>
+     className='w-full md:px-[300px]'/>
 
       <AboutSectionCards/>
     </div>

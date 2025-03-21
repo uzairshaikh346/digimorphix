@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 function Contact() {
   return (
-    <div>
+    <div className='bg-black'>
       <LampBanner props="Contact us"/>
-      <Image src="/ContactsectionImg.jpg" height={1000} width={1000} alt='about us'
-            className='w-full'/>
+      <Image src="/contactSectionImg.jpg" height={1000} width={1000} alt='about us'
+            className='w-full md:px-[300px]'/>
       <ContactForm/>
     </div>
   )
