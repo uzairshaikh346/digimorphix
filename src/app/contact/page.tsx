@@ -7,8 +7,8 @@ function Contact() {
   return (
     <div className='bg-black'>
       <LampBanner props="Contact us"/>
-      <Image src="/contactSectionImg.jpg" height={1000} width={1000} alt='contact us'
-            className='w-full md:px-[300px]'/>
+      {/* <Image src="/contactSectionImg.jpg" height={1000} width={1000} alt='contact us'
+            className='w-full md:px-[300px]'/> */}
       <ContactForm/>
     </div>
   )
