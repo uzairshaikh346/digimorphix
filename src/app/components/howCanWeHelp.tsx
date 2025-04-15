@@ -14,7 +14,7 @@ const HowCanWeHelp = () => {
           </h2>
           <p className="text-lg mb-6">
             At MarketiX, we are here to support your digital journey every step of the way.
-            Whether you are looking to improve your website's SEO, run targeted ad campaigns,
+            Whether you are looking to improve your websites SEO, run targeted ad campaigns,
             or design a standout brand identity — we have got you covered.
           </p>
           <ul className="list-disc list-inside space-y-2 text-base text-gray-300">

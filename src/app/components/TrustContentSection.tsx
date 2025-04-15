@@ -22,7 +22,7 @@ function TrustContentSection() {
             At MarketIX, we provide innovative solutions that help businesses
             grow, optimize, and succeed in the digital world. With expertise in
             digital marketing, web development, and branding, we craft tailored
-            strategies that boost your brand's reach and impact. Whether you’re
+            strategies that boost your brand`s reach and impact. Whether you’re
             looking to increase visibility, drive traffic, or enhance customer
             experience, we deliver results that align with your goals.
           </p>
