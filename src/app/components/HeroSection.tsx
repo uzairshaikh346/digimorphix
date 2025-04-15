@@ -22,7 +22,7 @@ function HeroSection() {
       <img
         className="object-cover object-center rounded"
         alt="hero"
-        src="/digitalMarketing.jpg"
+        src="/BannerGirl.png"
       />
     </div>
   </div>
