@@ -53,7 +53,7 @@ function Testinominals() {
             Our Services
             </h2>
             <p className="leading-relaxed text-base">
-            We offer a range of digital marketing services, including SEO, social media management, and performance tracking. Our team works closely with you to create strategies that align with your business goals and deliver measurable results. Whether you're looking to increase traffic or improve conversions, we've got you covered.
+            We offer a range of digital marketing services, including SEO, social media management, and performance tracking. Our team works closely with you to create strategies that align with your business goals and deliver measurable results. Whether you are looking to increase traffic or improve conversions, we have got you covered.
 
 
             </p>
