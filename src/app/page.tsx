@@ -4,6 +4,7 @@ import { ServiceSection } from "./components/ServiceSection";
 import { ClientReview } from "./components/ClientReview";
 import TrustContentSection from "./components/TrustContentSection";
 import HowCanWeHelp from "./components/howCanWeHelp";
+import Testinominals from "./components/testinominals";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <ServiceSection />
       <HowCanWeHelp/>
       <ClientReview />
+      <Testinominals/>
     </div>
   );
 }
