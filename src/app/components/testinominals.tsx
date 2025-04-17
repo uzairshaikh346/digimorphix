@@ -7,7 +7,7 @@ function Testinominals() {
   <div className="container px-5 py-24 mx-auto flex flex-wrap pb-28">
     <div className="flex flex-wrap -m-4">
       <div className="p-4 lg:w-1/2 md:w-full">
-        <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+        <div className="flex border-2 rounded-lg border-[#00ff00] border-opacity-50 p-8 sm:flex-row flex-col">
           <div className="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-gray-900 text-[#00ff00] flex-shrink-0">
             <svg
               fill="none"
@@ -22,7 +22,7 @@ function Testinominals() {
             </svg>
           </div>
           <div className="flex-grow">
-            <h2 className="text-gray-200 text-lg title-font font-medium mb-3">
+            <h2 className="text-[#00ff00] text-lg title-font font-medium mb-3">
             Marketix: Your Digital Growth Partner
             </h2>
             <p className="leading-relaxed text-base">
@@ -33,7 +33,7 @@ function Testinominals() {
         </div>
       </div>
       <div className="p-4 lg:w-1/2 md:w-full">
-        <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+        <div className="flex border-2 rounded-lg border-[#00ff00] border-opacity-50 p-8 sm:flex-row flex-col">
           <div className="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-gray-900 text-[#00ff00] flex-shrink-0">
             <svg
               fill="none"
@@ -49,7 +49,7 @@ function Testinominals() {
             </svg>
           </div>
           <div className="flex-grow">
-            <h2 className="text-gray-200 text-lg title-font font-medium mb-3">
+            <h2 className="text-[#00ff00] text-lg title-font font-medium mb-3">
             Our Services
             </h2>
             <p className="leading-relaxed text-base">

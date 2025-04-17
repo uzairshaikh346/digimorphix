@@ -3,11 +3,11 @@ import React from 'react';
 function Footer() {
   return (
     <div>
-      <footer className="text-gray-300 body-font bg-slate-950">
+      <footer className="text-gray-400 body-font bg-slate-950">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-300 tracking-widest text-sm mb-3">
+              <h2 className="title-font font-medium  tracking-widest text-sm mb-3">
                 SERVICES
               </h2>
               <nav className="list-none mb-10">
@@ -18,7 +18,7 @@ function Footer() {
               </nav>
             </div>
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-300 tracking-widest text-sm mb-3">
+              <h2 className="title-font font-medium  tracking-widest text-sm mb-3">
                 COMPANY
               </h2>
               <nav className="list-none mb-10">
@@ -29,7 +29,7 @@ function Footer() {
               </nav>
             </div>
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-300 tracking-widest text-sm mb-3">
+              <h2 className="title-font font-medium  tracking-widest text-sm mb-3">
                 CONTACT US
               </h2>
               <nav className="list-none mb-10">
