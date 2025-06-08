@@ -212,7 +212,7 @@ function ContactForm() {
                     id="name"
                     name="name"
                     required
-                    className="w-full bg-gray-800 rounded border border-primary_green text-primary_green focus:border-[#00ff00] focus:ring-2 focus:ring-primtext-primary_green focus:ring-opacity-20 text-base outline-none text-gray-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-800 rounded border border-primary_green focus:border-[#00ff00] focus:ring-2 focus:ring-primtext-primary_green focus:ring-opacity-20 text-base outline-none text-gray-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </motion.div>
@@ -233,7 +233,7 @@ function ContactForm() {
                     id="email"
                     name="email"
                     required
-                    className="w-full bg-gray-800 rounded border border-primary_green text-primary_green focus:border-[#00ff00] focus:ring-2 focus:ring-primtext-primary_green focus:ring-opacity-20 text-base outline-none text-gray-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-800 rounded border border-primary_green focus:border-[#00ff00] focus:ring-2 focus:ring-primtext-primary_green focus:ring-opacity-20 text-base outline-none text-gray-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </motion.div>

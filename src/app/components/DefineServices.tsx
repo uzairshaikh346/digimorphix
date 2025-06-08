@@ -74,7 +74,7 @@ const services = [
     title: "Branding and Identity Design",
     description:
       "We help define your brand’s identity with a consistent voice, unique visuals, and a professional look that resonates with your audience.",
-    video: "/serviceVideos/Branding.mp4",
+    video: "/serviceVideos/branding.mp4",
   }
 ];
 
