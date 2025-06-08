@@ -53,7 +53,7 @@ const HowCanWeHelp = () => {
 
         <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
           At MarketX, we are here to support your digital journey every step of the way. Whether you are 
-          looking to improve your website's SEO, run targeted ad campaigns, or design a standout brand 
+          looking to improve your website&apos;s SEO, run targeted ad campaigns, or design a standout brand 
           identity — we have got you covered.
         </p>
         
