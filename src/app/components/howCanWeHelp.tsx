@@ -1,49 +1,88 @@
-// components/HowCanWeHelp.tsx
-import Image from "next/image";
-import Link from "next/link";
+"use client"
+import { motion } from "framer-motion";
+import Image from 'next/image'
+ const fadeUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
 
 const HowCanWeHelp = () => {
   return (
-    <section className="bg-black text-white py-16 px-4 md:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+   <div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Main Heading */}
+          <motion.h1 
+          className="text-5xl md:text-6xl font-bold my-14"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          HOW CAN <span className="text-primary_green">WE HELP YOU?</span>
+        </motion.h1>
         
-        {/* Text Section */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#00ff00] mb-4">
-            How Can We Help You?
-          </h2>
-          <p className="text-lg mb-6">
-            At MarketiX, we are here to support your digital journey every step of the way.
-            Whether you are looking to improve your websites SEO, run targeted ad campaigns,
-            or design a standout brand identity — we have got you covered.
-          </p>
-          <ul className="list-disc list-inside space-y-2 text-base text-gray-300">
-            <li>Need a new website?</li>
-            <li>Want to rank higher on Google?</li>
-            <li>Looking to increase sales through social media?</li>
-            <li>Want to build your online store?</li>
-          </ul>
-          <Link href="/contact">
-          <button className="mt-6 bg-[#00ff00] hover:bg-green-600 text-black font-semibold py-2 px-6 rounded-lg transition duration-300">
-            Lets Talk
-          </button>
-          </Link>
-        </div>
+        {/* Hero Video Banner Container */}
+        <motion.div className="rounded-3xl mb-12 relative overflow-hidden"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+         <Image
+          className="w-full h-64 md:h-128  rounded-lg shadow-lg object-cover"
+          height={1000}
+          width={1000}
+          src="/girlImage.jpg" alt="marketix"
 
-        {/* Image Section */}
-        <div className="relative w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
-          <Image
-            src="/digitalSupport.jpg" // 💡 Replace with your actual image path
-            alt="Digital support illustration"
-            fill
-            className="object-cover"
-          />
-        </div>
+         />
+        </motion.div>
+        
+        {/* Description Text */}
+        <motion.div
+         variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}>
 
+        <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
+          At MarketX, we are here to support your digital journey every step of the way. Whether you are 
+          looking to improve your website's SEO, run targeted ad campaigns, or design a standout brand 
+          identity — we have got you covered.
+        </p>
+        
+        {/* Services List */}
+        <div className="space-y-4 text-left max-w-md mx-auto mb-12">
+          <div className="flex items-center space-x-3">
+            <div className="w-2 h-2 bg-primary_green rounded-full"></div>
+            <span className="text-gray-300">Need a new website?</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <div className="w-2 h-2 bg-primary_green rounded-full"></div>
+            <span className="text-gray-300">Want to rank higher on Google?</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <div className="w-2 h-2 bg-primary_green rounded-full"></div>
+            <span className="text-gray-300">Looking to increase sales through social media?</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <div className="w-2 h-2 bg-primary_green rounded-full"></div>
+            <span className="text-gray-300">Want to build your online store?</span>
+          </div>
+        </div>
+        </motion.div>
+        
+      
       </div>
-    </section>
+    </div>
   );
 };
 
 export default HowCanWeHelp;
-
+export {fadeUp}

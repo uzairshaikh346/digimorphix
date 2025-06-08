@@ -1,34 +1,125 @@
-import React from 'react'
-import { FlipWordsDemo } from './BannerText'
+"use client"
+import { Mockups } from "./ClientReview";
+import { FlipWords } from "./ui/flip-words";
+import { motion } from "framer-motion";
 
-function HeroSection() {
+const HeroSection = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const titleVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const mockupVariants = {
+    hidden: { y: 50, opacity: 0, scale: 0.9 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+        delay: 0.8
+      }
+    }
+  };
+
   return (
-    <section className="text-gray-300 body-font bg-black md:px-10">
-  <div className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center">
+    <section className="relative bg-gradient-to-br overflow-hidden" id="home">
+      {/* Main content */}
+      <motion.div 
+        className="min-h-screen"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="text-center mx-auto">
+          {/* Main heading */}
+          <motion.div 
+            className="flex flex-col md:flex-row justify-center text-lg my-7 md:my-10"
+            variants={titleVariants}
+          >
+            <motion.h1 
+              className=""
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <span className="text-primary_green">MARKETIX</span>
+            </motion.h1>
+            <motion.h1 
+              className=""
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              <span className="mx-3 text-Light_gray hidden md:block">-</span>
+            </motion.h1>
+            <motion.h1 
+              className=""
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              <FlipWords words={["Transform Digital Landscapes","Drive Customer Engagement" , "Maximize Your Brand Impact"]} />
+            </motion.h1>
+          </motion.div>
 
+          {/* Subtitle */}
+          <motion.p 
+            className='text-Light_gray text-center'
+            variants={itemVariants}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+          >
+            At MarketIX, we grow your brand with SEO, Social Media, and Web Development — everything you need to thrive online.
+          </motion.p>
 
-    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 className='text-[#00ff00] mb-5 font-bold '>MarketIX – Transforming Digital Landscapes</h1>
-    <FlipWordsDemo/>
-      {/* <h1 className="title-font sm:text-4xl text-xl mb-4 font-bold text-gray-300">
-      Unlock the Power of Digital Marketing & Web Development
-      </h1> */}
-      <p className="mb-8 leading-relaxed mt-5">
-      At MarketIX, we specialize in SEO, Social Media Marketing (SMM), and Web Development, helping businesses thrive in the digital era. Whether you are looking to rank higher on Google, engage your audience on social media, or build a stunning website, we have got you covered.
-      </p>
-     
-    </div>
-    <div className="lg:max-w-lg lg:w-full md:w-full w-5/6">
-      <img
-        className="object-cover object-center rounded"
-        alt="hero"
-        src="/BannerGirl.png"
-      />
-    </div>
-  </div>
-</section>
+          {/* CTA Button / Mockups */}
+          <motion.div
+            className="md:my-8 my-10"
+            variants={mockupVariants}
+            whileHover={{ 
+              scale: 1.02,
+              transition: { duration: 0.3 }
+            }}
+          >
+            <Mockups/>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  );
+};
 
-  )
-}
-
-export default HeroSection
+export default HeroSection;

@@ -3,15 +3,14 @@
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-card";
 
-export function ClientReview() {
+export function Mockups() {
   return (
-    <div className="h-[36rem] rounded-md fle z-10x flex-col antialiased bg-black  items-center justify-center relative overflow-hidden">
-        <h1 className='text-[#00ff00] text-3xl md:text-5xl font-bold text-center my-10'>Client Review</h1>
+    <div className=" rounded-md flex z-10x flex-col antialiased bg-black  items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
-        className="bg-black"
+        className="bg-black md:w-[50vw]"
         items={testimonials}
         direction="right"
-        speed="slow"
+        speed="fast"
       />
     </div>
   );
@@ -19,55 +18,26 @@ export function ClientReview() {
 
 const testimonials = [
   {
-    "quote": "It was a great experience with MarketIX",
-    "name": "Mathew",
-    "title": "Business owner"
+    image : "/webMockups/mockup1.jpg",
+    url : "/",
+    title : "Business owner"
   },
-  {
-    "quote": "MarketIX's service was outstanding and very professional.",
-    "name": "Sophia",
-    "title": "Entrepreneur"
+   {
+    image : "/webMockups/mockup2.jpg",
+    url : "/",
+    title : "Business owner"
   },
-  {
-    "quote": "I highly recommend MarketIX for their excellent customer support.",
-    "name": "Ali",
-    "title": "Marketing Manager"
+   {
+    image : "/webMockups/mockup3.jpg",
+    url : "/",
+    title : "Business owner"
   },
-  {
-    "quote": "MarketIX helped us achieve our business goals efficiently.",
-    "name": "Emma",
-    "title": "CEO"
+   {
+    image : "/webMockups/mockup4.jpg",
+    url : "/",
+    title : "Business owner"
   },
-  {
-    "quote": "Exceptional service and great results with MarketIX.",
-    "name": "John",
-    "title": "Small Business Owner"
-  },
-  {
-    "quote": "Working with MarketIX was a game-changer for our company.",
-    "name": "Liam",
-    "title": "COO"
-  },
-  {
-    "quote": "The team at MarketIX is extremely knowledgeable and helpful.",
-    "name": "Olivia",
-    "title": "Business Consultant"
-  },
-  {
-    "quote": "MarketIX's innovative strategies really boosted our sales.",
-    "name": "James",
-    "title": "Sales Director"
-  },
-  {
-    "quote": "Amazing service, highly satisfied with MarketIX.",
-    "name": "Mia",
-    "title": "Freelancer"
-  },
-  {
-    "quote": "MarketIX exceeded our expectations with their top-notch service.",
-    "name": "Noah",
-    "title": "Startup Founder"
-  }
+  
 ]
 
 
