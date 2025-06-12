@@ -181,7 +181,7 @@ function ServiceSection() {
           viewport={{ once: false, amount: 0.3 }}
         >
           <div className="container py-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="md:grid md:grid-cols-2 gap-12 items-center flex flex-col-reverse">
               {/* Left Content - Video */}
               <motion.div 
                 className="relative flex justify-center items-center"

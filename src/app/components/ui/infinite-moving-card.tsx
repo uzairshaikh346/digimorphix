@@ -103,7 +103,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[200px] h-[500px] max-w-full relative bg-black rounded-2xl border-2 border-b-[1px] border-[#00FF00] shrink-0 md:w-[200px] md:h-[300px] transition-transform duration-300 hover:scale-105 overflow-hidden"
+            className="w-[200px] h-[240px] md:h-[400px] max-w-full relative bg-black rounded-2xl border-2 border-b-[1px] border-[#00FF00] shrink-0 transition-transform duration-300 hover:scale-105 overflow-hidden"
             key={item.url + idx}
           >
             <a href={item.url} target="_blank" rel="noopener noreferrer" className="block h-full">
