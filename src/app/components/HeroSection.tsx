@@ -74,7 +74,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <span className="text-primary_green">MARKETIX</span>
+              <span className="text-primary_green">Bracklers</span>
             </motion.h1>
             <motion.h1 
               className=""
@@ -102,7 +102,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            At MarketIX, we grow your brand with SEO, Social Media, and Web Development — everything you need to thrive online.
+            At Bracklers, we grow your brand with SEO, Social Media, and Web Development — everything you need to thrive online.
           </motion.p>
 
           {/* CTA Button / Mockups */}

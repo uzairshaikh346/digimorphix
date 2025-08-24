@@ -23,7 +23,7 @@ function DefineServices() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}>
+          viewport={{ once: true, amount: 0.3 }}>
             <FlipCard
               media={item.video}
               title={item.title}

@@ -112,7 +112,7 @@ function ContactForm() {
               variants={itemVariants}
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><LocateIcon size={15}/> Address:</p>
-              <p className="text-gray-300">North Karachi,Karachi</p>
+              <p className="text-gray-300">Gulshan-e-iqbal,Karachi</p>
             </motion.div>
             
             <motion.div 
@@ -121,7 +121,7 @@ function ContactForm() {
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><MailIcon size={15}/> Email:</p>
               <a href="mailto:marketix29@gmail.com" className="text-gray-300 hover:text-[#00ff00] transition-colors duration-200">
-                abc123@gmail.com 
+                bracklersofficial@gmail.com
               </a>
             </motion.div>
             
@@ -130,7 +130,7 @@ function ContactForm() {
               variants={itemVariants}
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><Phone size={15}/> Phone:</p>
-              <p className="text-gray-300">+92 312345678</p>
+              <p className="text-gray-300">+92 3158445869</p>
             </motion.div>
             
             <motion.div 

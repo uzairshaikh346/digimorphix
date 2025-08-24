@@ -139,7 +139,7 @@ function ServiceSection() {
                   Website <span className="text-primary_green">Development</span>
                 </h1>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  At MarketIX, We specialize in SEO, Social Media Marketing (SMM), 
+                  At Bracklers, We specialize in SEO, Social Media Marketing (SMM), 
                   and Web Development, helping businesses thrive in the digital era. 
                   Whether you are looking to rank higher on Google, engage your audience 
                   on social media, or build a stunning website, we have got you covered.
@@ -216,7 +216,7 @@ function ServiceSection() {
                   Graphic Design & <span className="text-primary_green">UI/UX</span>
                 </h1>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  At MarketIX, We specialize in SEO, Social Media Marketing (SMM), 
+                  At Bracklers, We specialize in SEO, Social Media Marketing (SMM), 
                   and Web Development, helping businesses thrive in the digital era. 
                   Whether you are looking to rank higher on Google, engage your audience 
                   on social media, or build a stunning website, we have got you covered.

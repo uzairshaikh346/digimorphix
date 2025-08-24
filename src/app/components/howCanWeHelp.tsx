@@ -39,7 +39,7 @@ const HowCanWeHelp = () => {
           className="w-full h-64 md:h-128  rounded-lg shadow-lg object-cover"
           height={1000}
           width={1000}
-          src="/girlImage.jpg" alt="marketix"
+          src="/girlImage.jpg" alt="bracklers"
 
          />
         </motion.div>
@@ -52,7 +52,7 @@ const HowCanWeHelp = () => {
           viewport={{ once: true, amount: 0.3 }}>
 
         <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
-          At MarketX, we are here to support your digital journey every step of the way. Whether you are 
+          At Bracklers, we are here to support your digital journey every step of the way. Whether you are 
           looking to improve your website&apos;s SEO, run targeted ad campaigns, or design a standout brand 
           identity — we have got you covered.
         </p>
