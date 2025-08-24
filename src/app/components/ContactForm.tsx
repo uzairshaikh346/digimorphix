@@ -112,7 +112,7 @@ function ContactForm() {
               variants={itemVariants}
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><LocateIcon size={15}/> Address:</p>
-              <p className="text-gray-300">North Karahi,Karachi</p>
+              <p className="text-gray-300">North Karachi,Karachi</p>
             </motion.div>
             
             <motion.div 
@@ -121,7 +121,7 @@ function ContactForm() {
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><MailIcon size={15}/> Email:</p>
               <a href="mailto:marketix29@gmail.com" className="text-gray-300 hover:text-[#00ff00] transition-colors duration-200">
-                marketix29@gmail.com 
+                abc123@gmail.com 
               </a>
             </motion.div>
             
@@ -130,7 +130,7 @@ function ContactForm() {
               variants={itemVariants}
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><Phone size={15}/> Phone:</p>
-              <p className="text-gray-300">+92 314 2083121</p>
+              <p className="text-gray-300">+92 312345678</p>
             </motion.div>
             
             <motion.div 
@@ -195,7 +195,7 @@ function ContactForm() {
               Fill out the form below and we will get back to you shortly.
             </motion.p>
             form
-            <form action="https://formsubmit.co/marketix29@gmail.com" method="POST" className="flex flex-wrap -m-2">
+            <form action="https://formsubmit.co/" method="POST" className="flex flex-wrap -m-2">
               <motion.div 
                 className="p-2 w-1/2"
                 variants={formFieldVariants}

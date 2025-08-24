@@ -11,15 +11,13 @@ import ContactForm from "./components/ContactForm";
 export default function Home() {
   return (
 
-    <div>
-      Marketix
+   
+    <div className="bg-black px-4 sm:px-6 md:px-28 md:py-2">
+      <HeroSection />
+      <ServiceSection/>
+      <HowCanWeHelp/>
+      <DefineServices/>
+      <ContactForm/>
     </div>
-    // <div className="bg-black px-4 sm:px-6 md:px-28 md:py-2">
-    //   <HeroSection />
-    //   <ServiceSection/>
-    //   <HowCanWeHelp/>
-    //   <DefineServices/>
-    //   <ContactForm/>
-    // </div>
   );
 }
