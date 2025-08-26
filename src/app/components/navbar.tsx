@@ -26,7 +26,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 md:w-40 w-36">
             <Link href="/" className="text-2xl font-bold">
               <Image 
-                src="/Logo.png" 
+                src="/logo.png" 
                 alt="Bracklers Logo" 
                 width={150} 
                 height={50} 

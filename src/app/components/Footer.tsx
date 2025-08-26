@@ -111,7 +111,7 @@ function Footer() {
           <div className="lg:w-1/4 md:w-1/2 w-full px-4 mb-10 flex flex-col items-center md:items-start">
             <Link href="/" className="mb-4">
               <Image 
-                src="/Logo.png" 
+                src="/logo.png" 
                 alt="Bracklers Logo" 
                 width={120} 
                 height={50} 
