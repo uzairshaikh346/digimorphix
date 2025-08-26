@@ -89,7 +89,7 @@ function ServiceSection() {
   };
 
   return (
-    <div className="relative bg-black overflow-hidden flex items-center justify-center" id="about">
+    <div className="relative bg-black overflow-hidden flex items-center justify-center mt-10" id="about">
       {/* Geometric Pattern Background */}
       <div className="absolute inset-0 opacity-10"></div>
 
@@ -99,7 +99,7 @@ function ServiceSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         {/* Main Heading */}
         <motion.h1 
@@ -107,7 +107,7 @@ function ServiceSection() {
           variants={headingVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <span className="text-Light_gray">TRUST OUR </span>
           <span className="text-primary_green">EXPERTISE</span>
@@ -123,7 +123,7 @@ function ServiceSection() {
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <div className="container py-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -133,7 +133,7 @@ function ServiceSection() {
                 variants={textVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
               >
                 <h1 className="text-3xl md:text-4xl font-bold">
                   Website <span className="text-primary_green">Development</span>
@@ -153,7 +153,7 @@ function ServiceSection() {
                 variants={mediaVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -178,7 +178,7 @@ function ServiceSection() {
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <div className="container py-16">
             <div className="md:grid md:grid-cols-2 gap-12 items-center flex flex-col-reverse">
@@ -188,7 +188,7 @@ function ServiceSection() {
                 variants={reverseMediaVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -210,7 +210,7 @@ function ServiceSection() {
                 variants={reverseTextVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
               >
                 <h1 className="text-3xl md:text-4xl font-bold">
                   Graphic Design & <span className="text-primary_green">UI/UX</span>
@@ -233,7 +233,7 @@ function ServiceSection() {
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <div className="container py-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -243,7 +243,7 @@ function ServiceSection() {
                 variants={textVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
               >
                 <h1 className="text-3xl md:text-4xl font-bold">
                   Video Editing{" "}
@@ -264,7 +264,7 @@ function ServiceSection() {
                 variants={mediaVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >

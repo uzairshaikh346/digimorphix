@@ -77,7 +77,7 @@ function ContactForm() {
   };
 
   return (
-    <section className="text-gray-400 body-font relative bg-black my-10" id="contact">
+    <section className="text-gray-400 body-font relative bg-black mt-10" id="contact">
       <motion.div 
         className="container px-5 py-24 mx-auto"
         variants={containerVariants}
@@ -104,7 +104,7 @@ function ContactForm() {
               className="leading-relaxed text-lg text-gray-300"
               variants={itemVariants}
             >
-              Have a question or want to discuss a project? We d love to hear from you. Reach out to us via email, phone, or visit our office.
+              Have a question or want to discuss a project? We&apos;d love to hear from you. Reach out to us via email, phone, or visit our office.
             </motion.p>
             
             <motion.div 
@@ -112,7 +112,7 @@ function ContactForm() {
               variants={itemVariants}
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><LocateIcon size={15}/> Address:</p>
-              <p className="text-gray-300">Gulshan-e-iqbal,Karachi</p>
+              <p className="text-gray-300">Gulshan-e-iqbal, Karachi</p>
             </motion.div>
             
             <motion.div 
@@ -120,7 +120,7 @@ function ContactForm() {
               variants={itemVariants}
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><MailIcon size={15}/> Email:</p>
-              <a href="mailto:marketix29@gmail.com" className="text-gray-300 hover:text-[#00ff00] transition-colors duration-200">
+              <a href="mailto:bracklersofficial@gmail.com" className="text-gray-300 hover:text-primary_green transition-colors duration-200">
                 bracklersofficial@gmail.com
               </a>
             </motion.div>
@@ -130,7 +130,7 @@ function ContactForm() {
               variants={itemVariants}
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><Phone size={15}/> Phone:</p>
-              <p className="text-gray-300">+92 3158445869</p>
+              <p className="text-gray-300">+92 315 8445869</p>
             </motion.div>
             
             <motion.div 
@@ -139,10 +139,11 @@ function ContactForm() {
             >
               <motion.a 
                 href="#" 
-                className="text-gray-500 hover:text-[#00ff00] transition-colors duration-200"
+                className="text-gray-500 hover:text-primary_green transition-colors duration-200"
                 variants={socialIconVariants}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
+                aria-label="Facebook"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -150,10 +151,11 @@ function ContactForm() {
               </motion.a>
               <motion.a 
                 href="#" 
-                className="text-gray-500 hover:text-[#00ff00] transition-colors duration-200"
+                className="text-gray-500 hover:text-primary_green transition-colors duration-200"
                 variants={socialIconVariants}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
+                aria-label="Twitter"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
@@ -165,6 +167,7 @@ function ContactForm() {
                 variants={socialIconVariants}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
+                aria-label="Instagram"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
@@ -176,7 +179,7 @@ function ContactForm() {
 
           {/* Right Side - Contact Form */}
           <motion.div 
-            className="lg:w-1/2 w-full bg-gray-900 p-8 rounded-lg"
+            className="lg:w-1/2 w-full bg-gray-900 p-8 rounded-lg border border-primary_green/20"
             variants={rightSideVariants}
             initial="hidden"
             whileInView="visible"
@@ -194,7 +197,7 @@ function ContactForm() {
             >
               Fill out the form below and we will get back to you shortly.
             </motion.p>
-            form
+            
             <form action="https://formsubmit.co/" method="POST" className="flex flex-wrap -m-2">
               <motion.div 
                 className="p-2 w-1/2"
@@ -212,7 +215,7 @@ function ContactForm() {
                     id="name"
                     name="name"
                     required
-                    className="w-full bg-gray-800 rounded border border-primary_green focus:border-[#00ff00] focus:ring-2 focus:ring-primtext-primary_green focus:ring-opacity-20 text-base outline-none text-gray-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-800 rounded border border-primary_green focus:border-primary_green focus:ring-2 focus:ring-primary_green focus:ring-opacity-20 text-base outline-none text-gray-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </motion.div>
@@ -233,7 +236,7 @@ function ContactForm() {
                     id="email"
                     name="email"
                     required
-                    className="w-full bg-gray-800 rounded border border-primary_green focus:border-[#00ff00] focus:ring-2 focus:ring-primtext-primary_green focus:ring-opacity-20 text-base outline-none text-gray-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-800 rounded border border-primary_green focus:border-primary_green focus:ring-2 focus:ring-primary_green focus:ring-opacity-20 text-base outline-none text-gray-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </motion.div>
@@ -253,7 +256,8 @@ function ContactForm() {
                     id="message"
                     name="message"
                     required
-                    className="w-full bg-gray-800 rounded border border-primary_green text-primary_green focus:border-primtext-primary_green focus:ring-2 focus:ring-primtext-primary_green focus:ring-opacity-20 text-base outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out resize-none"
+                    rows={4}
+                    className="w-full bg-gray-800 rounded border border-primary_green text-gray-400 focus:border-primary_green focus:ring-2 focus:ring-primary_green focus:ring-opacity-20 text-base outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out resize-none"
                   />
                 </div>
               </motion.div>
@@ -266,7 +270,7 @@ function ContactForm() {
                 viewport={{ once: false, amount: 0.5 }}
               >
                 <motion.button 
-                  className="w-full text-white bg-gray-600 border-0 py-2 px-6 focus:outline-none hover:bg-primary_green rounded text-lg transition-colors duration-200"
+                  className="w-full text-white bg-primary_green border-0 py-2 px-6 focus:outline-none hover:bg-primary_green/80 rounded text-lg transition-colors duration-200 font-semibold"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"

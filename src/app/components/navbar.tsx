@@ -3,10 +3,15 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface NavItem {
+  name: string;
+  href: string;
+}
 
-  const navItems = [
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const navItems: NavItem[] = [
     { name: 'HOME', href: '#home' },
     { name: 'ABOUT', href: '#about' },
     { name: 'SERVICES', href: '#service' },
@@ -14,25 +19,31 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-black text-white">
+    <nav className="bg-black/95 backdrop-blur-md text-white border-b border-primary_green/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-28 md:py-2">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 md:w-40 w-36">
             <Link href="/" className="text-2xl font-bold">
-            <Image src="/logo.png" alt="Logo" width={500} height={500} />
-
+              <Image 
+                src="/Logo.png" 
+                alt="Bracklers Logo" 
+                width={150} 
+                height={50} 
+                className="h-12 w-auto"
+                priority
+              />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8 ">
+            <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 border-b-2 border-transparent hover:border-primary_green px-3 py-2 text-sm font-medium tracking-wider duration-400 hover:text-primary_green transition-transform"
+                  className="text-gray-300 border-b-2 border-transparent hover:border-primary_green px-3 py-2 text-sm font-medium tracking-wider duration-400 hover:text-primary_green transition-all duration-300 hover:scale-105"
                 >
                   {item.name}
                 </Link>
@@ -44,7 +55,8 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-primary_green hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary_green focus:ring-inset transition-all duration-300"
+              aria-label="Toggle menu"
             >
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
@@ -83,12 +95,12 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-700">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-700 bg-black/95 backdrop-blur-md">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300  block px-3 py-2 text-base font-medium tracking-wider transition-colors duration-200 hover:text-[#00ff00]"
+                className="text-gray-300 block px-3 py-2 text-base font-medium tracking-wider transition-all duration-300 hover:text-primary_green hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
