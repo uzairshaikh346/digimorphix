@@ -112,7 +112,9 @@ function ContactForm() {
               variants={itemVariants}
             >
               <p className="text-lg font-semibold text-gray-200 flex items-center gap-2"><LocateIcon size={15}/> Address:</p>
-              <p className="text-gray-300">Gulshan-e-iqbal, Karachi</p>
+              <p className="text-gray-300">Karachi , Pakistan</p>
+              <p className="text-gray-300">Florid , USA</p>
+
             </motion.div>
             
             <motion.div 
