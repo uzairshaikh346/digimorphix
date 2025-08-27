@@ -51,7 +51,7 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [phrases.length]);
 
-  // Mouse tracking
+  // Mouse tracking for cursor following element only
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (containerRef.current) {
@@ -59,18 +59,12 @@ const HeroSection = () => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         setMousePosition({ x, y });
-        mouseX.set(x);
-        mouseY.set(y);
       }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [mouseX, mouseY]);
-
-  // Mouse-based transforms
-  const rotateX = useTransform(mouseY, [0, 800], [5, -5]);
-  const rotateY = useTransform(mouseX, [0, 1200], [-5, 5]);
+  }, []);
 
   // Animation variants
   const containerVariants = {
@@ -183,7 +177,7 @@ const HeroSection = () => {
               left: `${particle.x}%`,
               top: `${particle.y}%`,
               width: particle.size,
-              height: particle.size,
+              height: particle.size - 20,
             }}
             animate={{
               y: [-20, -40, -20],
@@ -278,7 +272,6 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 0.08, scale: 1 }}
           transition={{ duration: 2, delay: 1 }}
-          whileHover={{ scale: 1.1, opacity: 0.15 }}
           className="absolute top-32 right-10 bg-black/30 backdrop-blur-sm p-6 rounded-xl font-mono text-primary_green text-sm transform rotate-3 hidden lg:block border border-primary_green/20 shadow-lg"
         >
           <motion.div animate={{ opacity: [0.3, 0.7, 0.3] }} transition={{ duration: 2, repeat: Infinity }}>
@@ -320,29 +313,23 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Main Content with 3D Transform */}
+      {/* Main Content */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="relative z-10 min-h-screen"
-        style={{
-          rotateX: rotateX,
-          rotateY: rotateY,
-          transformStyle: "preserve-3d"
-        }}
       >
         <div className="text-center mx-auto">
           {/* Floating Badge with Glow */}
           <motion.div
             variants={itemVariants}
-            className="pt-20 mb-12"
+            className="pt-10 mb-12"
           >
             <motion.div
               variants={glowVariants}
               animate="animate"
               className="inline-flex items-center px-6 py-3 bg-black/20 backdrop-blur-md border border-primary_green/20 rounded-full text-primary_green text-sm font-medium shadow-lg"
-              whileHover={{ scale: 1.05, y: -5 }}
             >
               <motion.div
                 animate={{ rotate: 360 }}
@@ -355,21 +342,13 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* 3D Rotating Main Heading */}
+          {/* Main Heading */}
           <motion.div
-            className="flex flex-col md:flex-row justify-center items-center text-6xl sm:text-7xl lg:text-9xl my-10 md:my-6 font-bold"
+            className="flex flex-col md:flex-row justify-center items-center text-4xl sm:text-5xl lg:text-7xl my-10 md:my-6 font-bold"
             variants={titleVariants}
-            style={{ transformStyle: "preserve-3d" }}
           >
             <motion.h1
               className="relative"
-              whileHover={{ 
-                scale: 1.1, 
-                rotateY: 15,
-                textShadow: "0 0 20px rgba(28, 159, 132, 0.8)"
-              }}
-              transition={{ duration: 0.3 }}
-              style={{ transformStyle: "preserve-3d" }}
             >
               <span className="bg-gradient-to-r from-primary_green via-primary_green to-primary_green bg-clip-text text-transparent">
                 Bracklers
@@ -393,7 +372,7 @@ const HeroSection = () => {
             
             {/* Rotating Text with Particle Effects */}
             <motion.h1
-              className="text-2xl sm:text-3xl lg:text-5xl font-semibold flex items-center justify-center relative"
+              className="text-xl sm:text-2xl lg:text-4xl font-semibold flex items-center justify-center relative"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
@@ -419,9 +398,9 @@ const HeroSection = () => {
             </motion.h1>
           </motion.div>
 
-          {/* Enhanced Description with Typewriter Effect */}
+          {/* Description */}
           <motion.p
-            className="text-gray-300 text-center text-xl sm:text-2xl max-w-5xl mx-auto mb-16 leading-relaxed px-4 font-light"
+            className="text-gray-300 text-center text-base sm:text-lg max-w-5xl mx-auto mb-16 leading-relaxed px-4 font-light"
             variants={itemVariants}
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 20 }}
@@ -429,32 +408,24 @@ const HeroSection = () => {
           >
             At <motion.span 
               className="text-primary_green font-semibold"
-              whileHover={{ scale: 1.1, textShadow: "0 0 10px rgba(28, 159, 132, 0.6)" }}
             >
               Bracklers
             </motion.span>, we grow your brand with SEO, Social Media, and Web Development — everything you need to thrive online.
           </motion.p>
 
-          {/* Ultra Animated CTA Buttons */}
+          {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-6 mb-20 justify-center"
           >
-            {/* Primary CTA with Holographic Effect */}
+            {/* Primary CTA */}
             <motion.button
-              whileHover={{ 
-                scale: 1.05, 
-                y: -8,
-                rotateX: 10,
-                boxShadow: "0 20px 40px rgba(28, 159, 132, 0.4)"
-              }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-10 py-5 bg-gradient-to-r from-primary_green via-primary_green to-primary_green rounded-2xl font-bold text-white text-lg shadow-2xl shadow-primary_green/30 transition-all duration-500 overflow-hidden"
-              style={{ transformStyle: "preserve-3d" }}
+              className="group relative px-6 py-3 bg-gradient-to-r from-primary_green via-primary_green to-primary_green rounded-xl font-bold text-white text-base shadow-2xl shadow-primary_green/30 transition-all duration-500 overflow-hidden"
             >
               {/* Animated Background Gradient */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-primary_green via-primary_green to-primary_green rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-r from-primary_green via-primary_green to-primary_green rounded-2xl"
                 animate={{
                   background: [
                     "linear-gradient(45deg, #1c9f84, #1c9f84, #1c9f84)",
@@ -485,97 +456,21 @@ const HeroSection = () => {
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1, repeat: Infinity }}
                 >
-                  <ArrowRight className="w-6 h-6 ml-3" />
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </motion.div>
               </span>
             </motion.button>
 
-            {/* Secondary CTA with Glass Morphism */}
+            {/* Secondary CTA */}
             <motion.button
-              whileHover={{ 
-                scale: 1.05, 
-                y: -8,
-                rotateX: 10,
-                backdropFilter: "blur(20px)"
-              }}
               whileTap={{ scale: 0.95 }}
-              className="group px-10 py-5 bg-white/5 backdrop-blur-md border-2 border-primary_green/30 rounded-2xl font-bold text-gray-200 text-lg hover:bg-white/10 hover:border-primary_green/50 transition-all duration-500 shadow-xl"
+              className="group px-5 py-2 bg-white/5 backdrop-blur-md border-2 border-primary_green/30 rounded-2xl font-bold text-gray-200 text-base shadow-xl"
             >
               <span className="flex items-center justify-center">
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <Play className="w-6 h-6 mr-3" />
-                </motion.div>
+                <Play className="w-6 h-6 mr-3" />
                 View Services
               </span>
             </motion.button>
-          </motion.div>
-
-          {/* 3D Stats with Floating Animation */}
-          <motion.div
-            variants={containerVariants}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center px-4"
-          >
-            {[
-              { number: "50+", label: "Projects Delivered", color: "text-primary_green" },
-              { number: "98%", label: "Client Satisfaction", color: "text-primary_green" },
-              { number: "24/7", label: "Support Available", color: "text-primary_green" }
-            ].map((stat, index) => (
-              <motion.div 
-                key={index}
-                variants={itemVariants} 
-                className="group relative"
-                whileHover={{ 
-                  scale: 1.1, 
-                  y: -10,
-                  rotateY: 15,
-                  transformStyle: "preserve-3d"
-                }}
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                <motion.div
-                  className="relative p-8 bg-black/20 backdrop-blur-md rounded-2xl border border-primary_green/20 shadow-xl"
-                  animate={{
-                    y: [0, -10, 0],
-                    rotateX: [0, 5, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    delay: index * 0.5
-                  }}
-                >
-                  <div className={`text-4xl font-bold ${stat.color} mb-3 group-hover:scale-125 transition-transform duration-300`}>
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-300 font-medium">{stat.label}</div>
-                  
-                  {/* Floating Particles around Stats */}
-                  {[...Array(3)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute w-2 h-2 bg-primary_green rounded-full opacity-60"
-                      style={{
-                        top: `${20 + i * 30}%`,
-                        right: `${10 + i * 20}%`,
-                      }}
-                      animate={{
-                        y: [-10, 10, -10],
-                        opacity: [0.3, 0.8, 0.3],
-                        scale: [0.5, 1, 0.5],
-                      }}
-                      transition={{
-                        duration: 2 + i,
-                        repeat: Infinity,
-                        delay: index * 0.2 + i * 0.3
-                      }}
-                    />
-                  ))}
-                </motion.div>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </motion.div>

@@ -23,7 +23,7 @@ const HowCanWeHelp = () => {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           HOW CAN <span className="text-primary_green">WE HELP YOU?</span>
         </motion.h1>
@@ -33,7 +33,7 @@ const HowCanWeHelp = () => {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
          <Image
           className="w-full h-64 md:h-128  rounded-lg shadow-lg object-cover"
