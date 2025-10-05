@@ -37,7 +37,7 @@ function Footer() {
   ];
   
   return (
-    <footer className="text-gray-400 bg-black border-t border-primary_green/20">
+    <footer className="text-gray-400 bg-white border-t border-primary_green/20">
       <div className="container px-5 py-16 mx-auto">
         <div className="flex flex-wrap justify-between md:text-left text-center">
           {/* Services Column */}

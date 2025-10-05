@@ -1,7 +1,23 @@
 "use client"
 import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { Play, Pause, Star, TrendingUp, ThumbsUp } from "lucide-react";
 
 function ServiceSection() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -14,68 +30,19 @@ function ServiceSection() {
     }
   };
 
- const headingVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 60 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
-
   const textVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const mediaVariants = {
-    hidden: { opacity: 0, x: 50, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const reverseTextVariants = {
     hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
         ease: "easeOut"
       }
     }
   };
 
-  const reverseMediaVariants = {
+  const videoVariants = {
     hidden: { opacity: 0, x: -50, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -88,200 +55,113 @@ function ServiceSection() {
     }
   };
 
-  return (
-    <div className="relative bg-black overflow-hidden flex items-center justify-center mt-10" id="about">
-      {/* Geometric Pattern Background */}
-      <div className="absolute inset-0 opacity-10"></div>
+  const features = [
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: "High quality",
+      subtitle: "creatives"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "See improved",
+      subtitle: "ROAS"
+    },
+    {
+      icon: <ThumbsUp className="w-6 h-6" />,
+      title: "Trusted by 100s of",
+      subtitle: "advertisers"
+    }
+  ];
 
+  return (
+    <div className="relative bg-white overflow-hidden flex items-center justify-center py-20 px-4" id="about">
       {/* Content Container */}
       <motion.div 
-        className="relative z-10 text-center px-6 max-w-6xl mx-auto"
+        className="relative z-10 max-w-7xl mx-auto w-full"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {/* Main Heading */}
-        <motion.h1 
-          className="text-2xl md:text-3xl lg:text-5xl font-bold mb-12 leading-tight"
-          variants={headingVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <span className="text-Light_gray">TRUST OUR </span>
-          <span className="text-primary_green">EXPERTISE</span>
-          <span className="text-white"> FOR</span>
-          <br />
-          <span className="text-Light_gray">UNMATCHED </span>
-          <span className="text-primary_green">DIGITAL SOLUTIONS</span>
-        </motion.h1>
-
-        {/* Website Development Section */}
-        <motion.section 
-          className="text-white flex items-center md:my-24 "
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="container py-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left Content */}
-              <motion.div 
-                className="space-y-6 flex flex-col justify-center"
-                variants={textVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Video Section - Left Side */}
+          <motion.div
+            variants={videoVariants}
+            className="relative group cursor-pointer"
+            onClick={handleVideoClick}
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <video
+                ref={videoRef}
+                className="w-full h-auto rounded-3xl"
+                poster="/video-thumbnail.jpg"
+                loop
               >
-                <h1 className="text-3xl md:text-4xl font-bold">
-                  Website <span className="text-primary_green">Development</span>
-                </h1>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  At Bracklers, We specialize in SEO, Social Media Marketing (SMM), 
-                  and Web Development, helping businesses thrive in the digital era. 
-                  Whether you are looking to rank higher on Google, engage your audience 
-                  on social media, or build a stunning website, we have got you covered.
-                </p>
-                <div className="flex gap-4"></div>
-              </motion.div>
-
-              {/* Right Content - Video */}
-              <motion.div 
-                className="relative flex justify-center items-center"
-                variants={mediaVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <video
-                  className="w-full h-auto max-w-lg rounded-lg shadow-lg object-cover"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src="/videos/webdev.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </motion.div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Graphic Design & UI/UX Section */}
-        <motion.section 
-          className="text-white flex items-center md:my-24"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="container py-16">
-            <div className="md:grid md:grid-cols-2 gap-12 items-center flex flex-col-reverse">
-              {/* Left Content - Video */}
-              <motion.div 
-                className="relative flex justify-center items-center"
-                variants={reverseMediaVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <video
-                  className="w-full h-auto max-w-lg rounded-lg shadow-lg object-cover"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src="/videos/graphicDesignPromo.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </motion.div>
+                <source src="/your-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               
-              {/* Right Content - Text */}
-              <motion.div 
-                className="space-y-6 flex flex-col justify-center"
-                variants={reverseTextVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
-              >
-                <h1 className="text-3xl md:text-4xl font-bold">
-                  Graphic Design & <span className="text-primary_green">UI/UX</span>
-                </h1>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  At Bracklers, We specialize in SEO, Social Media Marketing (SMM), 
-                  and Web Development, helping businesses thrive in the digital era. 
-                  Whether you are looking to rank higher on Google, engage your audience 
-                  on social media, or build a stunning website, we have got you covered.
-                </p>
-                <div className="flex gap-4"></div>
-              </motion.div>
+              {/* Play/Pause Button Overlay */}
+              {!isPlaying && (
+                <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition-all group-hover:bg-black/30">
+                  <div className="bg-white rounded-full p-8 transform group-hover:scale-110 transition-transform shadow-xl">
+                    <Play className="w-10 h-10 text-gray fill-gray ml-1" />
+                  </div>
+                </div>
+              )}
+              
+              {isPlaying && (
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="bg-white/90 rounded-full p-6 shadow-xl">
+                    <Pause className="w-8 h-8 text-gray" />
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-        </motion.section>
+          </motion.div>
 
-        {/* Video Editing Section */}
-        <motion.section 
-          className="text-white flex items-center md:my-24"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="container py-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left Content */}
-              <motion.div 
-                className="space-y-6 flex flex-col justify-center"
-                variants={textVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
-              >
-                <h1 className="text-3xl md:text-4xl font-bold">
-                  Video Editing{" "}
-                  <span className="text-primary_green">Content Creators</span>
-                </h1>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  AI, Marketing, Web Development, SEO, Social Media Marketing (SMM),
-                  and more! Helping businesses thrive in the digital era. Whether you
-                  are looking to rank higher or build an alluring website, we have
-                  got you covered.
-                </p>
-                <div className="flex gap-4"></div>
-              </motion.div>
+          {/* Text Section - Right Side */}
+          <motion.div
+            variants={textVariants}
+            className="space-y-8"
+          >
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+                <span className="text-purple">Stop wasting your ad spend </span>
+                <span className="text-gray">on low impact creatives.</span>
+              </h1>
+              <p className="text-gray/70 text-lg md:text-xl mt-6">
+                We Create Ads that Perform and Drive Growth.
+              </p>
+            </div>
 
-              {/* Right Content - Video */}
-              <motion.div 
-                className="relative flex justify-center items-center"
-                variants={mediaVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <video
-                  className="w-full h-auto max-w-lg rounded-lg shadow-lg object-cover"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+            {/* Features */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center text-center"
                 >
-                  <source src="/videos/videoEditing.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </motion.div>
+                  <div className="bg-purple-100 rounded-full p-4 mb-3">
+                    <div className="text-gray">
+                      {feature.icon}
+                    </div>
+                  </div>
+                  <h3 className="font-semibold text-gray text-base">
+                    {feature.title}
+                  </h3>
+                  <p className="font-semibold text-gray text-base">
+                    {feature.subtitle}
+                  </p>
+                </motion.div>
+              ))}
             </div>
-          </div>
-        </motion.section>
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   );

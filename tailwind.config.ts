@@ -62,8 +62,8 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
-        primary_green : '#1c9f84',
-        Light_gray : "#d1d5db",
+        purple : '#584596',
+        gray : "#313133",
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         brand: {
